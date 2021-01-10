@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_10_052128) do
+ActiveRecord::Schema.define(version: 2021_01_10_052252) do
+
+  create_table "assemblies", force: :cascade do |t|
+    t.integer "wine_id"
+    t.integer "strain_id"
+    t.integer "percentage"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["strain_id"], name: "index_assemblies_on_strain_id"
+    t.index ["wine_id"], name: "index_assemblies_on_wine_id"
+  end
 
   create_table "strains", force: :cascade do |t|
     t.string "name"
