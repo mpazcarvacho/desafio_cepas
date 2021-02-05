@@ -1,8 +1,14 @@
 class WinesController < ApplicationController
   before_action :set_wine, only: [:show, :edit, :update, :destroy]
+  #before_action :percentage_add_up, only: [:create]
 
   # GET /wines
   # GET /wines.json
+
+  # def percentage_add_up
+    
+  # end
+
   def index
     @wines = Wine.all
   end

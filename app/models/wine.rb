@@ -10,4 +10,8 @@ class Wine < ApplicationRecord
   #   details.sort.join(", ")
   # end
 
+  def percentage_add_up
+    
+  end
+
 end
